@@ -16,16 +16,13 @@ function openWhatsApp(message: string) {
 }
 
 export default function Pricing() {
-  const [currency, setCurrency] = useState<"INR" | "USD">("INR");
- const [currency, setCurrency] = useState<"INR" | "USD">("INR");
+const [currency, setCurrency] = useState<"INR" | "USD">("INR");
 
 const isAuthenticated = false;
 const isPremium = false;
 
 const [, setLocation] = useLocation();
 const { toast } = useToast();
-  const [, setLocation] = useLocation();
-  const { toast } = useToast();
 
   useSeo({
     title: "Pricing — Unlock every hidden gem",
