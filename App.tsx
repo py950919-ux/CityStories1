@@ -1,6 +1,5 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ProtectedRoute } from "@/components/protected-route";
 
 // Layout
 import { Navbar } from "@/components/layout/navbar";
@@ -42,23 +41,9 @@ function Router() {
           <Route path="/login" component={Login} />
           <Route path="/contributor" component={Contributor} />
           
-          <Route path="/contributor/apply">
-            <ProtectedRoute>
-              <ContributorApply />
-            </ProtectedRoute>
-          </Route>
-          
-          <Route path="/saved">
-            <ProtectedRoute>
-              <SavedPlaces />
-            </ProtectedRoute>
-          </Route>
-          
-          <Route path="/trips">
-            <ProtectedRoute>
-              <Trips />
-            </ProtectedRoute>
-          </Route>
+          <Route path="/contributor/apply" component={ContributorApply} />
+<Route path="/saved" component={SavedPlaces} />
+<Route path="/trips" component={Trips} />
           
           <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
