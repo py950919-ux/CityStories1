@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useCreateSubscription } from "@workspace/api-client-react";
-import { useAuth } from "@/lib/auth";
 import { Link, useLocation } from "wouter";
 import { Check, X, Map, Compass, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,7 +17,13 @@ function openWhatsApp(message: string) {
 
 export default function Pricing() {
   const [currency, setCurrency] = useState<"INR" | "USD">("INR");
-  const { isAuthenticated, isPremium } = useAuth();
+ const [currency, setCurrency] = useState<"INR" | "USD">("INR");
+
+const isAuthenticated = false;
+const isPremium = false;
+
+const [, setLocation] = useLocation();
+const { toast } = useToast();
   const [, setLocation] = useLocation();
   const { toast } = useToast();
 
