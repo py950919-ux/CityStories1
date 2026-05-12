@@ -1,6 +1,5 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { AuthProvider } from "@/lib/auth";
 import { ProtectedRoute } from "@/components/protected-route";
 
 // Layout
@@ -71,15 +70,14 @@ function Router() {
   );
 }
 
+
 function App() {
   return (
-   <QueryClientProvider client={queryClient}>
-  <AuthProvider>
-    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-      <Router />
-    </WouterRouter>
-  </AuthProvider>
-</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <Router />
+      </WouterRouter>
+    </QueryClientProvider>
   );
 }
 
