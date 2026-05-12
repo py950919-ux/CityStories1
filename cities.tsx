@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { useGetCities } from "@workspace/api-client-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -19,7 +18,8 @@ export default function Cities() {
       "Browse curated tier-2 and tier-3 Indian cities — Jaipur, Udaipur, Varanasi, Rishikesh, Manali, Chandigarh and more. Filter by spiritual, food, cafes and heritage.",
   });
   
-  const { data: cities, isLoading } = useGetCities();
+  const cities = [];
+const isLoading = false;
 
   const tabs = [
     { id: "all", label: "All Cities" },
