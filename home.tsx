@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Map, MapPin, Coffee, Utensils, ShieldCheck, ArrowRight, Compass } from "lucide-react";
-import { useGetCitiesStats, useGetFeaturedPlaces } from "@workspace/api-client-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { motion } from "framer-motion";
 import { useSeo } from "@/hooks/use-seo";
@@ -14,8 +13,15 @@ export default function Home() {
     description:
       "India's first local-knowledge travel guide. Curated by locals — food, hidden temples, cafes and slow mornings in tier-2 and tier-3 cities.",
   });
-  const { data: stats } = useGetCitiesStats();
-  const { data: featuredPlaces, isLoading: loadingFeatured } = useGetFeaturedPlaces({ limit: 3 });
+ const stats = {
+  total_cities: "6+",
+  total_places: "50+",
+  total_contributors: "20+",
+  total_users: "100+"
+};
+
+const featuredPlaces = [];
+const loadingFeatured = false;
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
