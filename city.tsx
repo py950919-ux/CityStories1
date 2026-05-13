@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRoute } from "wouter";
-import { useGetCity, getGetCityQueryKey, useGetPlaces } from "@workspace/api-client-react";
+import { useGetCity, getGetCityQueryKey, useGetPlaces }
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
