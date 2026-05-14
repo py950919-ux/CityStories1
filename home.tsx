@@ -1,17 +1,6 @@
 import { Link } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Coffee, Utensils, ShieldCheck, ArrowRight, Compass } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
-import { motion } from "framer-motion";
-import { useSeo } from "@/hooks/use-seo";
 
 export default function Home() {
-  useSeo({
-    title: "Real stories from real people in every city",
-    description:
-      "India's first local-knowledge travel guide. Curated by locals — food, hidden temples, cafes and slow mornings.",
-  });
 
   const stats = {
     total_cities: "6+",
@@ -21,14 +10,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-screen">
 
       {/* Hero */}
       <section className="py-20 text-center">
         <h1 className="text-4xl font-bold mb-4">
           Discover the real India
         </h1>
-        <p className="text-muted-foreground mb-6">
+        <p className="text-gray-500 mb-6">
           Curated by locals — not algorithms
         </p>
 
